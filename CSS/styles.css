@@ -1,0 +1,10 @@
+  body{
+                text-align: center;
+            }
+            h1,h2{color: darkgreen;
+            }
+            p{
+                font-family: sans-serif;
+                /* Font size of 18 pixels is ideal */
+                font-size: 18px;
+            }

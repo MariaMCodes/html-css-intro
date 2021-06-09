@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>More Float Examples</title>
+        <style>
+            img{
+                float: left;
+                padding-right: 10px; /*if want to add space between text and image*/
+            }
+            p{
+                background-color: lightgrey; /*but want the grey to cover the whole text, so do below*/
+            }
+            /*p:after{   to insert content after p*/
+            .clearfix::after{  /*best practice to use is to use this one and then just add class to which ever element it applies to*/
+                clear: both;
+                content: ""; /*used to specify content but don't need any content so it's blank*/
+                display: table; /*makes the element behave like a table*/
+            }
+            .block{
+                float: left;
+                width: 32%;
+                height: 150px;
+                background-color: orange;
+                margin-right: 2%;  /*to separate the three blocks as you cannot distingush as they are the same background-color*/
+                    
+            }
+            ul{
+                list-style-type: none; /*because we dont want a list*/
+                background-color: black;
+                color: white;
+                padding: 15px;
+                margin-bottom: 30px;             
+            }
+            li{
+                float: left;
+                padding-right: 40px;                    
+            }
+        </style>
+    </head>
+    <body>
+        <ul class="clearfix"> <!--add clearfix as our only problem is with the height, so we need to clear the float-->
+            <li>Home</li>
+            <li>About</li>
+            <li>Contact</li>
+        </ul>
+        <p class="clearfix">
+            <img src="img/sample.jpg" height="150px">
+            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id, mattis vel, nisi. Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh. Nullam mollis. Ut justo. Suspendisse potenti.
+        </p>
+        <div class="block"></div>
+        <div class="block"></div>
+        <div class="block" style="margin-right: 0;"></div> <!--add this style becuase width and margin total add up to 101%, so just need to remove margin on the right in the last block only. This inline style will always override internal style above-->
+    </body>
+</html>

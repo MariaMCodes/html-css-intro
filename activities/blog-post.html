@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Blog Post</title>
+        <style>
+            #wrapper{
+                width: 1200px;
+                margin: auto;
+                font-family: sans-serif;
+                font-size: 16px;
+                line-height: 140%;
+                color: #404040;
+                
+            }
+            #header{
+                background-color: #647528;
+                padding: 50px 40px;
+            }
+            h1{
+                color: white;
+            }
+            #left{
+                float: left;
+                background-color: #f5f5f5;
+                width: 800px;
+                padding: 40px;
+                box-sizing: border-box; /*this is important because it will increase the width otherwise*/
+                height: 530px;
+            }
+            #right{
+                float: right;
+                background-color: #e7e1e0;
+                width: 400px;
+                padding: 40px;
+                box-sizing: border-box;
+                height: 530px;
+            }
+            #published{
+                float: left;
+                color: #777777;           
+            }
+            #author{
+                float: right;
+                color: #777777;             
+            }
+            .clear{
+                clear: both; /*so text you've added doesn't go on top of published/author text*/
+                
+            }
+            #para1{
+                padding-top: 20px;
+            }
+            ul{
+                list-style-type: none;
+                margin-left: -40px; /*removes 40px on the left*/
+            }
+            li{
+                padding-bottom: 10px;
+            }
+            a{
+                color: #777777;
+            }
+        </style>
+        <link href="styles.css" rel="stylesheet" type="text/css">
+    </head>
+    <body>
+        <div id="wrapper">
+            <div id="header">
+                <h1>A nice blog post title</h1>
+            </div>
+            <div id="left">
+                <p id="published"><i>Published on : June 1st, 2019</i></p>
+                <p id="author"><i>Author ; Shruit Balasa</i></p>
+                <p class="clear"></p>
+                <p id="para1">
+                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id, mattis vel, nisi. Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh. Nullam mollis. Ut justo. Suspendisse potenti.
+                </p>
+                <p>
+                    Sed egestas, ante et vulputate volutpat, eros pede semper est, vitae luctus metus libero eu augue. Morbi purus libero, faucibus adipiscing, commodo quis, gravida id, est. Sed lectus. Praesent elementum hendrerit tortor. Sed semper lorem at felis. Vestibulum volutpat, lacus a ultrices sagittis, mi neque euismod dui, eu pulvinar nunc sapien ornare nisl. Phasellus pede arcu, dapibus eu, fermentum et, dapibus sed, urna.
+                </p>
+                <p>
+                    Morbi interdum mollis sapien. Sed ac risus. Phasellus lacinia, magna a ullamcorper laoreet, lectus arcu pulvinar risus, vitae facilisis libero dolor a purus. Sed vel lacus. Mauris nibh felis, adipiscing varius, adipiscing in, lacinia vel, tellus. Suspendisse ac urna. Etiam pellentesque mauris ut lectus. Nunc tellus ante, mattis eget, gravida vitae, ultricies ac, leo. Integer leo pede, ornare a, lacinia eu, vulputate vel, nisl.
+                </p>
+            </div>
+            <div id="right">
+                <h3>RECENT POSTS</h3>
+                <ul>
+                    <li><a href="#">Morbi in sem quis dui placerat ornare</a></li>    <!--# are dummy links-->
+                    <li><a href="#">Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam</a></li>
+                    <li><a href="#">Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat</a></li>
+                    <li><a href="#">Phasellus ultrices nulla quis nibh. Quisque a lectus</a></li>
+                </ul>
+            </div>
+        </div>
+    </body>
+</html>

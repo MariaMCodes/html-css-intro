@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Float Property</title>
+        <style>
+            img{
+                float: left;
+                padding-right: 10px; /*if want to add space between text and image*/
+            }
+            p{
+                background-color: lightgray; /*but want the grey to cover the whole text, so do below*/
+            }
+            /*p:after{   to insert content after p*/
+            .clearfix::after{  /*best practice to use is to use this one and then just add class to which ever element it applies to*/
+                clear: both;
+                content: ""; /*used to specify content but don't need any content so it's blank*/
+                display: table; /*makes the element behave like a table*/
+            }
+            #div1{
+                height: 150px;
+                background-color: orange;
+                clear: both; /*so it doesn't overlap with the image*/
+            }
+        </style>
+    </head>
+    <body>
+        <p class="clearfix">
+            <img src="img/sample.jpg" height="150px">
+            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id, mattis vel, nisi. Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh. Nullam mollis. Ut justo. Suspendisse potenti.
+        </p>
+        <div id="div1">
+        </div>
+    </body>
+</html>
